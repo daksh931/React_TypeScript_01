@@ -1,12 +1,13 @@
+import { useState } from 'react'
 import './App.css'
 import Home from './Components/Home'
 
 function App() {
-
+  const [val,setVal] = useState<string>("");
   return (
     <>
-    <Home name={'abcd'} age={1} add={()=>{console.log('object1')}} >
-      <button>Click here!</button>
+    <Home  value={val} setter={setVal} >
+      {/* <button>Click here!</button> */}
     </Home>
     </>
   )
